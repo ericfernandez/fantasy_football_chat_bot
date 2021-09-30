@@ -316,11 +316,7 @@ def bot_main(function):
         text = "Final " + get_scoreboard_short(league, week=week)
         text = text + "\n\n" + get_trophies(league, week=week)
     elif function == "init":
-        try:
-            text = os.environ["INIT_MSG"]
-        except KeyError:
-            # do nothing here, empty init message
-            pass
+        text = ''
     else:
         text = "Something happened. HALP"
 
